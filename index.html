@@ -56,6 +56,20 @@
                 <p>
                     Corresponde al area de control de cambios, donde se identifican los archivos a los que les vamos a hacer seguimiento y sobre los cuales se va a realizar el snapshot (captura de pantalla) del codigo. Es importante tener en cuenta que para realizar la confirmacion deben haberse agregado al INDEX por lo menos 1 archivo y todos aquellos que no figuren en este no podran ser reestablecidos.
                 </p>
+                <ul class="commands">
+                    <li>
+                        <strong>git status</strong> compara el contenido del INDEX con el contenido del working directory y devuelve el estado de los archivos.
+                        <ul>
+                            <li><strong>untracked</strong> no se esta haciendo seguimiento del archivo</li>
+                            <li><strong>tracked</strong> el archivo esta en seguimiento y puede restaurarse</li>
+                            <li><strong>modified</strong> el archivo difiere con el que se encuentra en el INDEX</li>
+                            <li><strong>commited</strong> las modificaciones fueron almacenadas en un commit.</li>
+                        </ul>
+                    </li>
+                    <li><strong>git add &lt;file></strong> Realiza los snapshot del codigo de los archivos especificados</li>
+                    <li><strong>git rm &lt;file> --cached</strong> Quita el archivo del INDEX, pero mantiene el original en el Working Directory</li>
+                    <li><strong>git restore --staged &lt;file></strong> Quita del INDEX los cambios registrados del archivo seleccionado</li>
+                </ul>
             </article>
             <article>
                 <h3>Repository</h3>
