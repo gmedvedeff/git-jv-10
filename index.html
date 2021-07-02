@@ -81,6 +81,56 @@
                 </ul>
             </article>
         </section>
+        <section>
+            <h2>Apuntadores GIT</h2>
+            <article>
+                <h3>HEAD</h3>
+                <p>
+                    Apuntador movil que permite al usuario desplazarse entre los commits utilizando las diferentes referencias como <em>hashes, HEAD^, HEAD~3, branches, tags, etc.</em> y tambien sirve como indicador de la posicion actual dentro del historial de cambios.
+                </p>
+            </article>
+            <article>
+                <h3>BRANCH</h3>
+                <p>
+                    Apuntador dinamico que se corresponde con el ultimo commit dentro de una historia determinada, esto existen debido a que git funciona como un <em>grafo dirigido aciclico</em> y por lo tanto los commits apuntan solamente hacia sus ancestros y no reconocen las confirmacion de cambios posteriores.
+                </p>
+                <ul class="commands">
+                    <li><strong>git branch &lt;name></strong>Crea una rama con el nombre especificado, sin movernos en el historial.</li>
+                    <li><strong>git checkout -b &lt;branch></strong> Crea una rama con el nombre que indicamos y nos redirige hacia ella.</li>
+                    <li><strong>git branch</strong> Lista las ramas del repositorio, para ver las remotas o todas podemos usar los parametros <em>-r -a</em> respectivamente.</li>
+                    <li><strong>git branch -d &lt;branch></strong> elimina de forma segura la rama especificada, siempre y cuando sus cambios hayan sido integrado en otra</li>
+                    <li><strong>git branch -D &lt;branch></strong> elimina de manera forzada la rama indicada, sin importar que los cambios no se hayan integrado en otra</li>
+                    <li><strong>git push -d &lt;remote> &lt;branch></strong> elimina del repositorio remoto la rama seleccionada</li>
+                    <li><strong>git branch -mv &lt;name></strong> Renombra la rama actual con el valor indicado</li>
+                    <li><strong>git merge &lt;branch></strong> genera un nuevo commit que integra los cambios de la rama seleccionada en la rama actual</li>
+                </ul>
+            </article>
+            <article>
+                <h3>TAG</h3>
+                <p>
+                    Apuntador estatico que correponde con un commit en especifico, se utiliza comunmente para el versionado de nuestro proyecto y el formato de este suele se <em>vn.n</em>, de esta manera podemos acceder facilmente a un commit que se encuentre muy atras en el historial.
+                </p>
+                <ul class="commands">
+                    <li><strong>git tag &lt;name></strong> Crea una etiqueta con el nombre especificado en el commit actual</li>
+                    <li><strong>git tag -l</strong> Muestra un listado de todas las etiquetas que existen</li>
+                    <li><strong>git tag &lt;new> &lt;old></strong> Asigna una nueva etiqueta a la seleccionada</li>
+                    <li><strong>git tag -d &lt;tag></strong> Elimina la etiqueta especificada</li>
+                </ul>
+            </article>
+            <article>
+                <h3>STASH</h3>
+                <p>
+                    Zona temporal de cambios que permite generar un apuntador señalando a un commit y a su INDEX; se utiliza cuando realizamos modificaciones en nuestro proyecto y debemos movernos en el historial, pero los cambios no ameritan una confirmacion. Esta herramienta realiza una operacion <em>merge</em> a la inversa
+                </p>
+                <ul class="commands">
+                    <li><strong>git stash</strong> almacena los cambios pendientes en la zona temporal</li>
+                    <li><strong>git stash list</strong> muestra todos los grupos de cambios almacenados</li>
+                    <li><strong>git stash apply stash@{n}</strong> aplica el stash seleccionado al Working Directory</li>
+                    <li><strong>git stash drop  stash@{n}</strong> elimina de la zona stash el grupo de cambios seleccionado</li>
+                    <li><strong>git stash pop  stash@{n}</strong> aplica los cambios de stash y elimina la referencia</li>
+                </ul>
+            </article>
+        </section>
     </main>
 </body>
 </html>
