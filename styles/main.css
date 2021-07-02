@@ -69,8 +69,34 @@
             font-size: calc(2vw + .8rem);
             text-shadow: 0 0 .5rem #eee;
         }
+    /*Main Content*/
+        main{
+            padding: 1rem;
+        }
+        section{
+            margin: 1rem auto;
+            border-radius: .25rem;
+            padding: 1rem;
+            box-shadow: 0 0 .5rem #333;
+        }
+        section h2{
+            border-bottom: .1rem solid #999;
+        }
+        .example{
+            margin: 1rem;
+            border-left: .25rem solid #448;
+            padding: 1rem;
+            background-color: #eee;
+            line-height: 1.5rem;
+            list-style:none;
+        }
 /*Small Devices - Smartphones*/
-
+    @media screen and (min-width: 576px){
+    /*Main Content*/
+        Section{
+            max-width: 540px;
+        }
+    }
 /*Medium Devices - Tablets*/
     @media screen and (min-width: 768px){
     /*Navigation*/
@@ -82,9 +108,18 @@
             width: auto;
             max-height: 600px;
         }
+    /*Main Content*/
+        Section{
+            max-width: 720px;
+        }
     }
 /*Large Devices - Desktop*/
-
+    @media screen and (min-width:992px){
+    /*Main Content*/
+        Section{
+            max-width: 960px;
+        }
+    }
 /*ExtraLarge - HD Desktop*/
     @media screen and (min-width:1200px){
     /*Navigation*/
