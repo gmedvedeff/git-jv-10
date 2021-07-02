@@ -73,13 +73,27 @@
             text-shadow: 0 0 .5rem #eee;
         }
     /*Main content*/
-        main{ 
-            max-width: 960px;
-            margin: .5rem auto;
-        }
         main, 
         footer{
             padding: 1rem;
+        }
+        section{
+            margin: 1rem auto;
+            border-radius: .25rem;
+            padding: 1rem;
+            box-shadow: 0 0 .5rem #333;
+        }
+        section h2{
+            border-bottom: .1rem solid #999;
+        }
+        .commands{
+            margin: 1rem;
+            margin-left: 2.5rem;
+            border-left: .25rem solid #448;
+            padding: 1rem;
+            background-color: #eee;
+            line-height: 1.5rem;
+            list-style:none;
         }
     /*Social Media*/
         .social{
@@ -99,7 +113,7 @@
             background-color: #333;
             transform: scale(1.2);
         }
-    /*Table*/
+    /*Colaborators*/
         table{
             margin: 1rem auto;
             border-collapse: collapse;
@@ -121,7 +135,12 @@
         tr:nth-child(odd){ background-color: #66c2 }
         tr:nth-child(even){ background-color: #4482 }
 /*Small Devices - Smartphones*/
-
+    @media screen and (min-width: 576px){
+    /*Main Content*/
+        Section{
+            max-width: 540px;
+        }
+    }
 /*Medium Devices - Tablets*/
     @media screen and (min-width: 768px){
     /*Navigation*/
@@ -133,9 +152,18 @@
             width: auto;
             max-height: 600px;
         }
+    /*Main Content*/
+        Section{
+            max-width: 720px;
+        }
     }
 /*Large Devices - Desktop*/
-
+    @media screen and (min-width:992px){
+    /*Main Content*/
+        Section{
+            max-width: 960px;
+        }
+    }
 /*ExtraLarge - HD Desktop*/
     @media screen and (min-width:1200px){
     /*Navigation*/
