@@ -125,6 +125,13 @@
                 <p>
                     Zona temporal de cambios que permite generar un apuntador señalando a un commit y a su INDEX; se utiliza cuando realizamos modificaciones en nuestro proyecto y debemos movernos en el historial, pero los cambios no ameritan una confirmacion. Esta herramienta realiza una operacion <em>merge</em> a la inversa
                 </p>
+                <ul class="commands">
+                    <li><strong>git stash</strong> almacena los cambios pendientes en la zona temporal</li>
+                    <li><strong>git stash list</strong> muestra todos los grupos de cambios almacenados</li>
+                    <li><strong>git stash apply stash@{n}</strong> aplica el stash seleccionado al Working Directory</li>
+                    <li><strong>git stash drop  stash@{n}</strong> elimina de la zona stash el grupo de cambios seleccionado</li>
+                    <li><strong>git stash pop  stash@{n}</strong> aplica los cambios de stash y elimina la referencia</li>
+                </ul>
             </article>
         </section>
     </main>
