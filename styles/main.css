@@ -35,8 +35,8 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            background: 
-                #448 
+            background:
+                #448
                 linear-gradient(#36c, #448);
         }
         nav a{
@@ -73,9 +73,9 @@
             text-shadow: 0 0 .5rem #eee;
         }
     /*Main content*/
-        main, 
+        main,
         footer{
-            padding: 1rem;
+            padding: .1rem;
         }
         section{
             margin: 1rem auto;
@@ -158,7 +158,7 @@
         }
     }
 /*Large Devices - Desktop*/
-    @media screen and (min-width:992px){
+    @media scren and (min-width:992px){
     /*Main Content*/
         Section{
             max-width: 960px;
